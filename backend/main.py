@@ -124,6 +124,12 @@ def get_products():
 
     return products
 
+@app.get("/api/about")
+def get_about():
+    return {
+        "message": "Flower Shop"
+    }
+
 
 @app.get("/api/products/{product_id}")
 def get_product(product_id: int):
