@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Petal | Flower Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo" href="#">🌷 Bloom & Petal</a>
+        <nav>
+            <a href="#flowers">Flowers</a>
+            <a href="#about">About</a>
+            <a href="#checkout">Checkout</a>
+        </nav>
+        <a class="cart-link" href="#checkout">
+            Cart <span id="cart-count">0</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">A LITTLE HAPPINESS, DELIVERED</p>
+                <h1>Flowers that say<br>what words cannot.</h1>
+                <p>Thoughtful bouquets for birthdays, celebrations, and everyday moments.</p>
+                <a class="button" href="#flowers">Explore Flowers</a>
+            </div>
+            <div class="hero-art" aria-hidden="true">💐</div>
+        </section>
+
+        <section id="flowers" class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Find your perfect bouquet</h2>
+                </div>
+                <p>Fresh picks for every occasion.</p>
+            </div>
+
+            <div id="products" class="product-grid">
+                <p>Loading flowers...</p>
+            </div>
+            <p id="product-message" class="message" role="status"></p>
+        </section>
+
+        <section id="about" class="about">
+            <span class="about-icon">🌼</span>
+            <div>
+                <h2>Make someone's day bloom.</h2>
+                <p>Choose a bouquet, add your delivery details, and place your order in just a few steps.</p>
+            </div>
+        </section>
+
+        <section id="checkout" class="section checkout-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">ALMOST THERE</p>
+                    <h2>Your cart & delivery</h2>
+                </div>
+            </div>
+
+            <div class="checkout-grid">
+                <div class="panel">
+                    <h3>Your cart</h3>
+                    <div id="cart-items">
+                        <p class="muted">Your cart is empty. Add some flowers first!</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total</span>
+                        <strong id="cart-total">$0.00</strong>
+                    </div>
+                </div>
+
+                <form id="checkout-form" class="panel">
+                    <h3>Delivery details</h3>
+
+                    <label for="customer-name">Full name</label>
+                    <input id="customer-name" name="name" required maxlength="100" autocomplete="name">
+
+                    <label for="customer-email">Email</label>
+                    <input id="customer-email" name="email" type="email" required autocomplete="email">
+
+                    <label for="customer-phone">Phone (optional)</label>
+                    <input id="customer-phone" name="phone" type="tel" autocomplete="tel">
+
+                    <label for="street">Street address</label>
+                    <input id="street" name="street" required maxlength="200" autocomplete="street-address">
+
+                    <label for="city">City</label>
+                    <input id="city" name="city" required maxlength="100" autocomplete="address-level2">
+
+                    <label for="state">State</label>
+                    <input id="state" name="state" required maxlength="100" autocomplete="address-level1">
+
+                    <label for="postal-code">ZIP / postal code</label>
+                    <input id="postal-code" name="postal_code" required maxlength="20" autocomplete="postal-code">
+
+                    <button id="place-order-button" class="button button-full" type="submit">
+                        Place order
+                    </button>
+                    <p id="order-message" class="message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="#">🌷 Bloom & Petal</a>
+        <p>Made with love, one bouquet at a time.</p>
+        <small>Demo flower shop · No online payments</small>
+    </footer>
+</body>
+
+</html>
